@@ -1,6 +1,6 @@
 # figma-rest
 
-Node and browser client for [Figma Rest API](https://www.figma.com/developers/api)
+Node and browser client for [Figma REST API](https://www.figma.com/developers/api)
 
 ## Install
 

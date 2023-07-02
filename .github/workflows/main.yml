@@ -3,7 +3,8 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  Build:
+  build:
+    name: Build (Node${{ matrix.node-version }}})
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -30,7 +31,8 @@ jobs:
           path: ${{ github.workspace }}/*
           key: ${{ github.sha }}
 
-  Test:
+  test:
+    name: Test (Node${{ matrix.node-version }}})
     runs-on: ubuntu-latest
     strategy:
       matrix:
