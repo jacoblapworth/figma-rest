@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16, 18]
+        node-version: [14, 18]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -34,8 +34,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16, 18]
+        node-version: [14, 18]
     steps:
+      - name: Project cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/*
+          key: ${{ github.sha }}
+
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -45,8 +51,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - name: Project cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/*
-          key: ${{ github.sha }}
+      - name: Install dependencies
+        run: npm install
+
+      - name: Test
+        run: npm run test

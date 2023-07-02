@@ -15,6 +15,12 @@
     "email": "jacob@lapworth.nz"
   },
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
   "devDependencies": {
     "msw": "^1.2.2",
     "tsup": "^7.1.0",
