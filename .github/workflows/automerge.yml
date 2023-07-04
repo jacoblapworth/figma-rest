@@ -1,7 +1,6 @@
 name: Automerge
 on: pull_request_target
-permissions:
-  pull-requests: write
+permissions: write-all
 jobs:
   dependabot:
     name: Dependabot
