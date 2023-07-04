@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
+    "version": "changeset version",
+    "release": "npm run build && changeset publish",
     "test": "vitest"
   },
   "author": {
