@@ -31,8 +31,8 @@ type ClientConfig = SharedConfig & (PersonalConfig | OAuthConfig)
 export class FigmaClient {
   request: Got
 
-  personalAccessToken?: string
-  oAuthToken?: string
+  private personalAccessToken?: string
+  private oAuthToken?: string
 
   activityLogs: ActivityLogsResource
   comments: CommentsResource
