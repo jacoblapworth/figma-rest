@@ -1,6 +1,6 @@
 import { BaseResource } from './base.js'
 
-type ActivityLogEvents =
+export type ActivityLogEventType =
   | 'branch_archive'
   | 'branch_create'
   | 'branch_delete'
@@ -20,7 +20,7 @@ type ActivityLogEvents =
   | 'org_user_create'
   | 'org_user_delete'
 
-type ActivityLogEvent = {
+export type ActivityLogEvent = {
   /**
    * Action is the task or activity the actor performed.
    * The type tells us the kind of action, and the details represent the associated metadata.
@@ -29,7 +29,7 @@ type ActivityLogEvent = {
   action: {
     // TODO: add discriminated types for details
     details: Record<string, string>
-    type: ActivityLogEvent
+    type: ActivityLogEventType
   }
   /**
    * Actor is the user who performed the action. There are three attributes to identify the user: email, id and name.
@@ -84,20 +84,21 @@ type UserEntity = {
   name: string
   /** Email associated with the user's account. */
   email: string
+  type: 'user'
 }
 
 /** A Figma Design or FigJam file */
 type FileEntity = {
-  key: string
   /** Unique identifier of the file. */
-  name: string
+  key: string
   /** Name of the file. */
-  editor_type: string
+  name: string
   /** Indicates if the object is a file on Figma Design or FigJam. Can be figma or figjam. */
-  link_access: string
+  editor_type: string
   /** Access policy for users who have the link to the file. Can be view, edit, org_view, org_edit or inherit. */
-  proto_link_access: string
+  link_access: string
   /** Access policy for users who have the link to the file's prototype. Can be view, org_view or inherit. */
+  proto_link_access: string
 }
 
 /** A file branch that diverges from and can be merged back into the main file */
@@ -163,7 +164,7 @@ type ActivityLogParams = {
   /**
    * Event type(s) to include in the response. Can have multiple values separated by comma. All events are returned by default.
    */
-  events?: ActivityLogEvents[]
+  events?: ActivityLogEventType[]
   /**
    * Unix timestamp of the least recent event to include. This param defaults to one year ago if unspecified. Events prior to one year ago are not available.
    */

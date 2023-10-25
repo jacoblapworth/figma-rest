@@ -1,3 +1,36 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`variables > logs 1`] = `{}`;
+exports[`variables > logs 1`] = `
+{
+  "done": false,
+  "value": {
+    "action": {
+      "details": {
+        "figjam_paid_status": "viewer",
+        "figma_paid_status": "viewer",
+        "permission": "member",
+      },
+      "type": "org_user_create",
+    },
+    "actor": {
+      "email": "admin@figma.com",
+      "id": "1099091282752443416",
+      "name": "Admin",
+      "type": "user",
+    },
+    "context": {
+      "ip_address": "172.19.0.1",
+      "is_figma_support_team_action": false,
+      "org_id": "1047918802483077121",
+    },
+    "entity": {
+      "email": "member@figma.com",
+      "id": "1099091282712783786",
+      "name": "Member",
+      "type": "user",
+    },
+    "id": "1243",
+    "timestamp": 1650578182,
+  },
+}
+`;
