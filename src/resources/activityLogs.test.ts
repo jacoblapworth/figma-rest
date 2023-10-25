@@ -5,7 +5,7 @@ describe('variables', () => {
   const client = new FigmaClient({ personalAccessToken: 'abc' })
 
   test('logs', async () => {
-    const result = await client.activityLogs.get()
+    const result = await client.activityLogs.get().next()
     expect(result).toMatchSnapshot()
   })
 })
