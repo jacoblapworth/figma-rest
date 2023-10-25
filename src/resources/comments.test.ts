@@ -1,4 +1,4 @@
-import { rest } from 'msw'
+import { HttpResponse, http } from 'msw'
 import { describe, expect, test } from 'vitest'
 import { FigmaClient } from '../client.js'
 import { Reaction } from '../models/api.js'
@@ -10,13 +10,15 @@ describe('comments', () => {
 
   test('reactions', async () => {
     server.use(
-      rest.get(
+      http.get(
         'https://api.figma.com/v1/files/:file/comments/:comment/reactions',
-        (req, res, ctx) => {
-          return res.once(
-            ctx.json({ pagination: { next_page: '123' }, reactions })
-          )
-        }
+        () => {
+          return HttpResponse.json({
+            pagination: { next_page: '123' },
+            reactions,
+          })
+        },
+        { once: true }
       )
     )
 
