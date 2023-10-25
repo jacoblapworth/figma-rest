@@ -1,4 +1,4 @@
-import { rest } from 'msw'
+import { http, HttpResponse } from 'msw'
 import {
   localVariablesResponse,
   modifyVariablesResponse,
@@ -9,26 +9,24 @@ import { activityLogsResponse } from './fixtures/activityLogs.js'
 
 export const handlers = [
   // v1/files/${fileKey}/variables/local
-  rest.get(
-    'https://api.figma.com/v1/files/:key/variables/local',
-    (req, res, ctx) => res(ctx.json(localVariablesResponse))
+  http.get('https://api.figma.com/v1/files/:key/variables/local', () =>
+    HttpResponse.json(localVariablesResponse)
   ),
 
-  rest.get(
-    'https://api.figma.com/v1/files/:key/variables/published',
-    (req, res, ctx) => res(ctx.json(publishedVariablesResponse))
+  http.get('https://api.figma.com/v1/files/:key/variables/published', () =>
+    HttpResponse.json(publishedVariablesResponse)
   ),
 
-  rest.post('https://api.figma.com/v1/files/:key/variables', (req, res, ctx) =>
-    res(ctx.json(modifyVariablesResponse))
+  http.post('https://api.figma.com/v1/files/:key/variables', () =>
+    HttpResponse.json(modifyVariablesResponse)
   ),
 
-  rest.get(
+  http.get(
     'https://api.figma.com/v1/files/:file/comments/:comment/reactions',
-    (req, res, ctx) => res(ctx.json({ reactions }))
+    () => HttpResponse.json({ reactions })
   ),
 
-  rest.get('https://api.figma.com/v1/activity_logs', (req, res, ctx) =>
-    res(ctx.json(activityLogsResponse))
+  http.get('https://api.figma.com/v1/activity_logs', () =>
+    HttpResponse.json(activityLogsResponse)
   ),
 ]
