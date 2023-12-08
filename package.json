@@ -8,6 +8,9 @@
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "publish": "changeset publish",
     "test": "vitest"
   },
   "author": {
