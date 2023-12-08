@@ -39,14 +39,14 @@ export async function paginateAll<T>(paginateEach: AsyncIterableIterator<T>) {
   return items
 }
 
-export type FigmaClientPaginate = {
-  <T, R = unknown>(
-    url: string | URL,
-    options?: FigmaPagination<T, R>
-  ): AsyncIterableIterator<T>
+// export type FigmaClientPaginate = {
+//   <T, R = unknown>(
+//     url: string | URL,
+//     options?: FigmaPagination<T, R>
+//   ): AsyncIterableIterator<T>
 
-  all: <T, R = unknown>(
-    url: string | URL,
-    options?: OptionsWithPagination<T, R>
-  ) => Promise<T[]>
-}
+//   all: <T, R = unknown>(
+//     url: string | URL,
+//     options?: OptionsWithPagination<T, R>
+//   ) => Promise<T[]>
+// }
