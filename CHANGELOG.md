@@ -1,5 +1,11 @@
 # figma-rest
 
+## 0.2.1
+
+### Patch Changes
+
+- [#64](https://github.com/jacoblapworth/figma-rest/pull/64) [`8e961fa`](https://github.com/jacoblapworth/figma-rest/commit/8e961fa04c20a261b843f92cadabf7560bf2e98a) Thanks [@jacoblapworth](https://github.com/jacoblapworth)! - release
+
 ## 0.2.0
 
 ### Minor Changes
