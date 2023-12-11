@@ -28,3 +28,25 @@ export function paginate<T, R extends FigmaPagination = PaginatedResponse<T>>({
 
   return false
 }
+
+export async function paginateAll<T>(paginateEach: AsyncIterableIterator<T>) {
+  let items: T[] = []
+
+  for await (let item of paginateEach) {
+    items.push(item)
+  }
+
+  return items
+}
+
+// export type FigmaClientPaginate = {
+//   <T, R = unknown>(
+//     url: string | URL,
+//     options?: FigmaPagination<T, R>
+//   ): AsyncIterableIterator<T>
+
+//   all: <T, R = unknown>(
+//     url: string | URL,
+//     options?: OptionsWithPagination<T, R>
+//   ) => Promise<T[]>
+// }
