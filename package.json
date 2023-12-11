@@ -19,6 +19,9 @@
     "email": "jacob@lapworth.nz"
   },
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
