@@ -1,7 +1,9 @@
 name: CI
+
 on:
   pull_request:
   workflow_dispatch:
+
 jobs:
   build:
     name: Build [Node${{ matrix.node-version }}]
@@ -13,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
