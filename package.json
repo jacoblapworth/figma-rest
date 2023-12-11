@@ -10,7 +10,7 @@
     "build": "tsup",
     "changeset": "changeset",
     "version": "changeset version",
-    "publish": "changeset publish",
+    "release": "changeset publish",
     "test": "vitest"
   },
   "author": {
