@@ -22,8 +22,21 @@ updates:
       - 'jacoblapworth'
     commit-message:
       prefix: 'chore(deps):'
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+    target-branch: 'next'
+
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    assignees:
+      - 'jacoblapworth'
+    commit-message:
+      prefix: 'chore(deps):'
     groups:
       breaking-changes:
         update-types:
           - 'major'
-        target-branch: 'next'
+    target-branch: 'next'
