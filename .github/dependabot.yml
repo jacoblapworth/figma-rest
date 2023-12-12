@@ -23,7 +23,7 @@ updates:
     commit-message:
       prefix: 'chore(deps):'
     groups:
-      - breaking-changes:
-          update-types:
-            - 'major'
-          target-branch: 'next'
+      breaking-changes:
+        update-types:
+          - 'major'
+        target-branch: 'next'
