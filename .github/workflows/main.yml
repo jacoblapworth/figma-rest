@@ -65,8 +65,8 @@ jobs:
       - name: Test
         run: npm run test
 
-  test-success:
-    name: Test success
+  success:
+    name: Success
     runs-on: ubuntu-latest
     needs: [build, test]
     if: always()
