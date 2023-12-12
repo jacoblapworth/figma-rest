@@ -6,7 +6,7 @@ on:
 
 jobs:
   commitlint:
-    name: Commitlint
+    name: Lint commits
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
