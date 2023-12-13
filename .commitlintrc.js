@@ -1,1 +1,6 @@
-export default { extends: ['@commitlint/config-conventional'] }
+export default {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'body-max-length': [0, 'always', Infinity],
+  },
+}
