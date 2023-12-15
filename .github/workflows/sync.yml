@@ -1,0 +1,28 @@
+name: Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    name: Sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+          cache: 'npm'
+
+      - name: Sync `main` to `next`
+        id: sync
+        uses: TreTuna/sync-branches@3428e61
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FROM_BRANCH: main
+          TO_BRANCH: next
+          PULL_REQUEST_AUTO_MERGE_METHOD: 'squash'
+          PULL_REQUEST_TITLE: 'chore: sync main to next'
