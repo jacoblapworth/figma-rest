@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "ESNext",
     "module": "NodeNext",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "strict": true
   },
 }
