@@ -19,7 +19,7 @@ jobs:
 
       - name: Sync `main` to `next`
         id: sync
-        uses: TreTuna/sync-branches@3428e61
+        uses: TreTuna/sync-branches@3428e61731dfc1b0c92e574a89f612c37340cad9
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FROM_BRANCH: main
