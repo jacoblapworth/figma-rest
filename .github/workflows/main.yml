@@ -50,6 +50,7 @@ jobs:
         with:
           name: build
           path: dist/
+          retention-days: 5
 
       - name: Project cache
         uses: actions/cache@v3
