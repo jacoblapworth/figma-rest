@@ -2,6 +2,9 @@
   "name": "figma-rest",
   "version": "0.2.1",
   "description": "Client for Figma REST API",
+  "repository": {
+    "url": "https://github.com/jacoblapworth/figma-rest"
+  },
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.cts",
