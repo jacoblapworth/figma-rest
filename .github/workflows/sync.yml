@@ -10,6 +10,13 @@ jobs:
     name: Sync
     runs-on: ubuntu-latest
     steps:
+      - name: Create GitHub App Token
+        uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -19,9 +26,9 @@ jobs:
 
       - name: Sync `main` to `next`
         id: sync
-        uses: TreTuna/sync-branches@3428e61
+        uses: TreTuna/sync-branches@3428e61731dfc1b0c92e574a89f612c37340cad9
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           FROM_BRANCH: main
           TO_BRANCH: next
           PULL_REQUEST_AUTO_MERGE_METHOD: 'squash'
