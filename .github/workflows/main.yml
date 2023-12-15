@@ -91,5 +91,5 @@ jobs:
       - name: Assign dependabot failures
         run: gh pr edit ${{ github.event.pull_request.number }} --add-assignee "jacoblapworth"
         if: ${{ failure() && github.actor == 'dependabot[bot]' }}
-      - run: echo ${{ github.actor}} ${{ github.steps }}
-        if: ${{ always() }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
