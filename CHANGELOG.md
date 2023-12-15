@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/jacoblapworth/figma-rest/compare/v2.0.1...v2.0.2) (2023-12-15)
+
+
+### Bug Fixes
+
+* test patch ([#95](https://github.com/jacoblapworth/figma-rest/issues/95)) ([f8eb5ef](https://github.com/jacoblapworth/figma-rest/commit/f8eb5efd8de015748b90ec6be5b093b421e7ff21))
+
 # figma-rest
 
 ## 0.2.1
