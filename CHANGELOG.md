@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/jacoblapworth/figma-rest/compare/v2.0.2...v2.0.3) (2023-12-15)
+
+
+### Bug Fixes
+
+* update version before committing ([#96](https://github.com/jacoblapworth/figma-rest/issues/96)) ([3d6f159](https://github.com/jacoblapworth/figma-rest/commit/3d6f159e16b077f0f133931add3694e80577161a))
+
 ## [2.0.2](https://github.com/jacoblapworth/figma-rest/compare/v2.0.1...v2.0.2) (2023-12-15)
 
 
