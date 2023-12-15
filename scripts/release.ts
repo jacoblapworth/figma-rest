@@ -20,15 +20,14 @@ async function release() {
           releaseNameTemplate: 'figma-rest@${nextRelease.version}',
         },
       ],
-      [
-        '@semantic-release/git',
-        {
-          assets: ['CHANGELOG.md', 'package.json', 'dist/**'],
-          forcePush: true,
-          message:
-            'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
-        },
-      ],
+      // [
+      //   '@semantic-release/git',
+      //   {
+      //     assets: ['CHANGELOG.md', 'package.json', 'dist/**'],
+      //     message:
+      //       'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+      //   },
+      // ],
     ],
   })
 
