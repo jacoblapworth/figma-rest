@@ -1,13 +1,18 @@
-export default {
+import SemanticRelease from 'semantic-release'
+
+await SemanticRelease({
   branches: [
     '+([0-9])?(.{+([0-9]),x}).x',
     'main',
-    'next',
-    { name: 'beta', prerelease: true },
-    { name: 'alpha', prerelease: true },
+    { name: 'next', channel: 'next', prerelease: 'beta' },
   ],
   plugins: [
-    '@semantic-release/commit-analyzer',
+    [
+      '@semantic-release/commit-analyzer',
+      {
+        preset: 'conventionalcommits',
+      },
+    ],
     '@semantic-release/release-notes-generator',
     '@semantic-release/changelog',
     '@semantic-release/npm',
@@ -26,4 +31,4 @@ export default {
       },
     ],
   ],
-}
+})
