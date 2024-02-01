@@ -6,6 +6,7 @@
     "url": "git+https://github.com/jacoblapworth/figma-rest.git"
   },
   "type": "module",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
