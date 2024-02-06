@@ -1,3 +1,32 @@
+# [3.0.0](https://github.com/jacoblapworth/figma-rest/compare/v2.0.3...v3.0.0) (2024-02-01)
+
+
+### Build System
+
+* convert package to esm ([#140](https://github.com/jacoblapworth/figma-rest/issues/140)) ([f55380e](https://github.com/jacoblapworth/figma-rest/commit/f55380ed1ba686f4bef025110800c391deb0dcba))
+
+
+### Features
+
+* test [@next](https://github.com/next) release ([#144](https://github.com/jacoblapworth/figma-rest/issues/144)) ([14ace4e](https://github.com/jacoblapworth/figma-rest/commit/14ace4e30f095eae35eedfe1277a566b41287b72))
+
+
+### BREAKING CHANGES
+
+* package is esm only
+
+# [3.0.0](https://github.com/jacoblapworth/figma-rest/compare/v2.0.3...v3.0.0) (2024-01-31)
+
+
+### Build System
+
+* convert package to esm ([#140](https://github.com/jacoblapworth/figma-rest/issues/140)) ([f55380e](https://github.com/jacoblapworth/figma-rest/commit/f55380ed1ba686f4bef025110800c391deb0dcba))
+
+
+### BREAKING CHANGES
+
+* package is esm only
+
 ## [2.0.3](https://github.com/jacoblapworth/figma-rest/compare/v2.0.2...v2.0.3) (2023-12-15)
 
 
