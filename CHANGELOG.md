@@ -1,3 +1,20 @@
+# [3.0.0-beta.1](https://github.com/jacoblapworth/figma-rest/compare/v2.0.3...v3.0.0-beta.1) (2024-02-09)
+
+
+### Bug Fixes
+
+* update lockfile ([#159](https://github.com/jacoblapworth/figma-rest/issues/159)) ([4000273](https://github.com/jacoblapworth/figma-rest/commit/40002738bc482ae2341c73480f7e26c3253ef9da))
+
+
+### Build System
+
+* convert package to esm ([#140](https://github.com/jacoblapworth/figma-rest/issues/140)) ([ecb655f](https://github.com/jacoblapworth/figma-rest/commit/ecb655f78670358ca2cb5f08c8468b6c2b8e36d9))
+
+
+### BREAKING CHANGES
+
+* package is esm only
+
 ## [2.0.3](https://github.com/jacoblapworth/figma-rest/compare/v2.0.2...v2.0.3) (2023-12-15)
 
 
