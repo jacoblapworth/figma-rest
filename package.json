@@ -44,14 +44,14 @@
     "@commitlint/config-conventional": "^19.0.3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "husky": "^9.0.7",
     "msw": "^2.0.10",
-    "semantic-release": "^23.0.0",
+    "semantic-release": "^24.0.0",
     "tsup": "^8.0.1",
     "tsx": "^4.7.0",
     "typescript": "^5.2.2",
-    "vitest": "^1.0.2"
+    "vitest": "^2.0.0"
   },
   "dependencies": {
     "got": "^14.0.0",
