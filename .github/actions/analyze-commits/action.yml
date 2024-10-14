@@ -1,0 +1,15 @@
+name: 'Semantic release commit analyzer'
+description: 'Analyze commits in PR to determine the type of release'
+author: 'Jacob Lapworth'
+outputs:
+  next-release-type:
+    description: 'The semver type of release to be made'
+  next-release-version:
+    description: 'The version name of release to be made'
+  next-release-channel:
+    description: 'The channel of release to be made'
+  next-release-notes:
+    description: 'The release notes for the release to be made'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
