@@ -51,7 +51,7 @@
     "tsup": "^8.0.1",
     "tsx": "^4.7.0",
     "typescript": "^5.2.2",
-    "vitest": "^3.0.2"
+    "vitest": "^4.0.4"
   },
   "dependencies": {
     "got": "^14.0.0",
