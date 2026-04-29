@@ -21,7 +21,7 @@ jobs:
       id-token: write # use OIDC for npm provenance
     steps:
       - name: Create GitHub App Token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v3
         id: app-token
         with:
           app-id: ${{ vars.APP_ID }}
