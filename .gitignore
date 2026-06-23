@@ -1,2 +1,6 @@
+# dependencies
 node_modules
-dist/
+
+# build outputs
+dist
+!.github/actions/*/dist
