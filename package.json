@@ -40,21 +40,21 @@
     "node": ">=16"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.0.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/cli": "^21.1.0",
+    "@commitlint/config-conventional": "^21.1.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "conventional-changelog-conventionalcommits": "^9.0.0",
+    "conventional-changelog-conventionalcommits": "^10.2.0",
     "husky": "^9.0.7",
     "msw": "^2.0.10",
     "semantic-release": "^25.0.1",
     "tsup": "^8.0.1",
     "tsx": "^4.7.0",
-    "typescript": "^5.2.2",
+    "typescript": "^6.0.3",
     "vitest": "^4.0.4"
   },
   "dependencies": {
-    "got": "^14.0.0",
+    "got": "^15.0.7",
     "zod": "^4.0.5"
   }
 }
