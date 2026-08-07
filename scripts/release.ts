@@ -1,11 +1,13 @@
-import SemanticRelease from 'semantic-release'
+import SemanticRelease, { type BranchSpec } from 'semantic-release'
+
+const branches: ReadonlyArray<BranchSpec> = [
+  '+([0-9])?(.{+([0-9]),x}).x',
+  'main',
+  { name: 'next', channel: 'next', prerelease: 'beta' },
+]
 
 await SemanticRelease({
-  branches: [
-    '+([0-9])?(.{+([0-9]),x}).x',
-    'main',
-    { name: 'next', channel: 'next', prerelease: 'beta' },
-  ],
+  branches,
   plugins: [
     [
       '@semantic-release/commit-analyzer',

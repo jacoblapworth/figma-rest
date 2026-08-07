@@ -1,0 +1,38 @@
+name: Versioning
+
+on:
+  pull_request:
+    branches:
+      - main
+      - next
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-version:
+    name: Check version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Rename branch for analyzing commits
+        run: |
+          git switch -c ${{ github.event.pull_request.base.ref }}
+
+      - name: Analyze commits
+        id: analyze-commits
+        uses: ./.github/actions/analyze-commits
+
+      - name: Comment
+        run: |
+          gh pr comment $PR --body `This PR will trigger a release of a new version.\n- Semver type: ${{ steps.analyze-commits.outputs.next-release-type }}\n- Version: ${{ steps.analyze-commits.outputs.next-release-version }}\n- Channel: $CHANNEL`
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.id }}
+          CHANNEL: ${{ steps.analyze-commits.outputs.next-release-channel }}
